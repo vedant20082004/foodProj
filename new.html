@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colorful Fonts Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .rgb-text {
+            color: rgb(255, 0, 0); /* Red */
+            font-size: 2em;
+            margin: 20px;
+        }
+
+        .rgba-text {
+            color: rgba(0, 0, 255, 0.7); /* Semi-transparent Blue */
+            font-size: 2em;
+            margin: 20px;
+        }
+
+        .gradient-text {
+            font-size: 2em;
+            margin: 20px;
+            background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .animated-gradient-text {
+            font-size: 2em;
+            margin: 20px;
+            background: linear-gradient(90deg, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255));
+            background-size: 300%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            animation: gradient-animation 3s infinite;
+        }
+
+        @keyframes gradient-animation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="rgb-text">This is red text using RGB.</div>
+    <div class="rgba-text">This is semi-transparent blue text using RGBA.</div>
+    <div class="gradient-text">This text has a linear gradient.</div>
+    <div class="animated-gradient-text">This text has an animated gradient.</div>
+</body>
+</html>
